@@ -1,6 +1,7 @@
 package com.kennet.pokeapp.data.adapter
 
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.kennet.pokeapp.R
@@ -17,9 +18,11 @@ class PokemonAdapter(private var pokemonList:List<Pokemon>): RecyclerView.Adapte
     override fun getItemCount(): Int = pokemonList.size
     override fun onBindViewHolder(holder: PokemonViewHolder, position: Int) {
         val item = pokemonList[position]
+
         holder.render(item, position)
 
     }
+
     fun updateData(newList: List<Pokemon>) {
         pokemonList = newList
         notifyDataSetChanged()

@@ -12,9 +12,11 @@ import com.kennet.pokeapp.databinding.DialogLoginSuccessBinding
 
 class LoginSuccessDialog : DialogFragment() {
     private var title: String = ""
+    private var description: String = ""
     companion object {
-        fun create(title: String = "",): LoginSuccessDialog = LoginSuccessDialog().apply {
+        fun create(title: String = "", description: String = "",): LoginSuccessDialog = LoginSuccessDialog().apply {
             this.title = title
+            this.description = description
         }
     }
 
@@ -30,9 +32,10 @@ class LoginSuccessDialog : DialogFragment() {
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         val binding = DialogLoginSuccessBinding.inflate(requireActivity().layoutInflater)
         binding.btnPositive.setOnClickListener { dismiss() }
-//        if (!title.isNullOrEmpty()){
-//            binding.tvTitle = title
-//        }
+        if (!title.isNullOrEmpty()){
+            binding.tvTitle.text = title
+            binding.tvDescription.text = description
+        }
 
         return AlertDialog.Builder(requireActivity())
             .setView(binding.root)

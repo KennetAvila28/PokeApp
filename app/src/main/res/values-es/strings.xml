@@ -56,4 +56,6 @@
     <string name="signin_button_createaccount">Crear mi cuenta</string>
     <string name="cancel">Cancelar</string>
     <string name="retry">Reintentar</string>
+    <string name="title_activity_pokemon_detail">PokemonDetailActivity</string>
+    <string name="logout">Cerrar Sesión</string>
 </resources>

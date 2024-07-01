@@ -8,7 +8,7 @@ import javax.inject.Inject
 class GetAllPokemonsUseCase @Inject constructor(private val repository: PokemonRepository){
 
 
-    suspend operator fun invoke () : List<Pokemon>?{
-        return repository.getAll()?.results
+    suspend operator fun invoke (limit:Int) : List<Pokemon>?{
+        return repository.getAll(limit)?.results
     }
 }

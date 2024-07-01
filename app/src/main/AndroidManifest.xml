@@ -19,6 +19,11 @@
             android:label="@string/title_activity_pokemon"
             android:theme="@style/Theme.PokeApp.NoActionBar" />
         <activity
+            android:name=".ui.pokemon_list.PokemonDetailActivity"
+            android:exported="false"
+            android:label="@string/title_activity_pokemon_detail"
+            android:theme="@style/Theme.PokeApp.NoActionBar" />
+        <activity
             android:name=".ui.verification.VerificationActivity"
             android:exported="false" />
         <activity
